@@ -1,0 +1,910 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1c1e23;
+  color: #d1d1d1;
+}
+
+/* Header */
+.header {
+  background: #2a2f38;
+  padding: 10px 20px;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.search-container {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #0088cc;
+  border-radius: 4px;
+  background: #2a2f38;
+  color: white;
+}
+
+.search-container button {
+  padding: 8px 15px;
+  margin-left: 10px;
+  background: #0088cc;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-actions a {
+  margin-left: 10px;
+  color: #d1d1d1;
+  text-decoration: none;
+}
+
+.navbar {
+  background: #1c1e23;
+  padding: 10px 0;
+  border-top: 1px solid #3b414a;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #1c1e23;
+}
+
+.hero-section .cta-button {
+  padding: 10px 20px;
+  background: #0088cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Product Section */
+.product-section {
+    padding: 20px;
+    background: #2a2f38;
+  }
+  
+  .product-section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .product-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Perkecil ukuran minimal kartu */
+  }
+  
+  .product-card {
+    background: #1c1e23;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 150px; /* Perkecil tinggi gambar */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h4 {
+    font-size: 16px; /* Perkecil ukuran judul */
+    color: #ffffff;
+    margin: 8px 0;
+  }
+  
+  .product-card p {
+    font-size: 12px; /* Perkecil ukuran deskripsi */
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #d1d1d1;
+  }
+  
+  .rating {
+    margin: 8px 0;
+    font-size: 14px; /* Perkecil ukuran bintang */
+    color: #ffcc00;
+  }
+  
+  .rating i {
+    margin-right: 2px;
+  }
+  
+  .add-to-cart {
+    padding: 8px 12px; /* Perkecil tombol */
+    background: #0088cc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px; /* Sesuaikan ukuran font */
+    transition: background 0.3s;
+    display: inline-block;
+  }
+  
+  .add-to-cart:hover {
+    background: #00baff;
+  }
+  
+/* Footer */
+.footer {
+  background: #2a2f38;
+  color: white;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right li {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-container {
+    margin: 0;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+/* Footer */
+.footer {
+    background: #2a2f38;
+    color: #d1d1d1;
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-left {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-left h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .footer-left p {
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-right li {
+    margin: 8px 0;
+  }
+  
+  .footer-right a {
+    color: #0088cc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-right a:hover {
+    color: #00baff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border-top: 1px solid #3b414a;
+    padding-top: 10px;
+    color: #a9a9a9;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-left,
+    .footer-right {
+      min-width: 100%;
+    }
+  
+    .footer-bottom {
+      margin-top: 15px;
+    }
+  }
+  .rating {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ffcc00;
+  }
+  
+  .rating i {
+    margin-right: 3px;
+  }
+  /* Produk Terlaris Section */
+.bestseller-section {
+    padding: 20px;
+    background: #1c1e23;
+  }
+  
+  .bestseller-section h3 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .bestseller-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Membuat produk dapat di-scroll horizontal */
+    padding-bottom: 10px;
+    scrollbar-width: thin; /* Untuk browser modern */
+  }
+  
+  .bestseller-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .bestseller-container::-webkit-scrollbar-thumb {
+    background: #0088cc;
+    border-radius: 4px;
+  }
+  
+  .bestseller-container::-webkit-scrollbar-track {
+    background: #2a2f38;
+  }
+  
+  .bestseller-card {
+    min-width: 120px; /* Ukuran minimal untuk kartu */
+    background: #2a2f38;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .bestseller-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .bestseller-card img {
+    width: 100%;
+    height: 80px; /* Ukuran gambar lebih kecil */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 5px;
+  }
+  
+  .bestseller-card h4 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .bestseller-card p {
+    font-size: 12px;
+    color: #d1d1d1;
+  }
+
+  .recommendation-section {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .recommendation-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .recommendation-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scrollbar-width: thin;
+  }
+  
+  .recommendation-container::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .recommendation-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .recommendation-card {
+    min-width: 200px;
+    background: #2b2b2b;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    flex: 0 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .recommendation-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .recommendation-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .recommendation-card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  .recommendation-card p {
+    font-size: 1rem;
+    color: #b5b5b5;
+  }
+/* Flash Sale Section */
+.flashsale-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .flashsale-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .flashsale-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Membuat konten dapat berpindah baris */
+    justify-content: center; /* Menyusun produk ke tengah */
+  }
+  
+  .flashsale-card {
+    min-width: 200px;
+    background: #2b2b2b;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    flex: 1 1 200px; /* Menentukan lebar minimum dan memperbolehkan elemen menyesuaikan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    margin-bottom: 20px; /* Menambahkan margin bawah agar kartu tidak terlalu rapat */
+  }
+  
+  .flashsale-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .flashsale-card img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .flashsale-card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  .flashsale-card .original-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #b5b5b5;
+  }
+  
+  .flashsale-card .sale-price {
+    font-size: 1.2rem;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .flashsale-section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .flashsale-container {
+      gap: 10px; /* Mengurangi jarak antar elemen di layar lebih kecil */
+    }
+  
+    .flashsale-card {
+      min-width: 150px; /* Menyesuaikan ukuran kartu di perangkat kecil */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flashsale-section {
+      padding: 15px;
+    }
+  
+    .flashsale-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .flashsale-card {
+      min-width: 140px; /* Ukuran lebih kecil untuk ponsel */
+      flex: 1 1 140px;
+    }
+  
+    .flashsale-card img {
+      max-height: 120px; /* Menyesuaikan tinggi gambar */
+    }
+  
+    .flashsale-card h4 {
+      font-size: 1rem;
+    }
+  
+    .flashsale-card .original-price,
+    .flashsale-card .sale-price {
+      font-size: 1rem;
+    }
+  }
+/* Promo Setiap Senin, Rabu, Jumat */
+.promo-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .promo-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .promo-container {
+    display: flex;
+    overflow-x: auto; /* Membuat konten bisa digulir ke samping */
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .promo-card {
+    min-width: 250px; /* Lebar minimum kartu */
+    background: #444;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1 1 250px; /* Membuat kartu fleksibel dengan lebar minimum */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    margin-bottom: 20px; /* Menambahkan margin bawah agar kartu tidak terlalu rapat */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .promo-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .promo-card img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .promo-card h4 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+  }
+  
+  .promo-card p {
+    font-size: 1rem;
+    color: #ddd;
+    flex-grow: 1; /* Membuat teks berkembang untuk mengisi ruang */
+  }
+  
+  .promo-card .cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%; /* Memastikan tombol menggunakan seluruh lebar kartu */
+    box-sizing: border-box; /* Untuk menghindari padding mempengaruhi ukuran tombol */
+  }
+  
+  .promo-card .cta-button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .promo-section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .promo-container {
+      gap: 15px;
+    }
+  
+    .promo-card {
+      min-width: 200px; /* Lebar kartu menyesuaikan untuk tablet */
+    }
+  
+    .promo-card .cta-button {
+      font-size: 0.95rem;
+      padding: 10px 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .promo-section {
+      padding: 15px;
+    }
+  
+    .promo-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .promo-card {
+      min-width: 150px; /* Lebar kartu menyesuaikan untuk perangkat ponsel */
+    }
+  
+    .promo-card img {
+      max-height: 120px;
+    }
+  
+    .promo-card h4 {
+      font-size: 1rem;
+    }
+  
+    .promo-card p {
+      font-size: 0.9rem;
+    }
+  
+    .promo-card .cta-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+/* Animasi intro untuk konten promosi */
+.promo-advertisement {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    opacity: 0; /* Mulai dengan transparan */
+    transform: translateY(50px); /* Mulai dengan posisi sedikit di bawah */
+    animation: fadeInUp 1s forwards; /* Animasi fade-in dari bawah */
+    animation-delay: 0.5s; /* Delay sedikit sebelum animasi dimulai */
+  }
+  
+  .promo-banner {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Mulai dengan transparan */
+    animation: fadeIn 1s forwards; /* Efek fade-in untuk banner */
+    animation-delay: 0.7s; /* Sedikit lebih lambat muncul */
+  }
+  
+  .promo-banner h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards; /* Animasi muncul dari kiri */
+    animation-delay: 1s; /* Delay sedikit */
+  }
+  
+  .promo-banner .promo-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 400;
+    opacity: 0;
+    animation: fadeInLeft 1s forwards; /* Animasi muncul dari kiri */
+    animation-delay: 1.3s; /* Delay sedikit lebih lambat */
+  }
+  
+  .cta-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e04300;
+    transform: scale(1.1); /* Efek tombol sedikit membesar saat hover */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Animasi untuk intro */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsif untuk perangkat kecil */
+  @media (max-width: 768px) {
+    .promo-banner h3 {
+      font-size: 1.5em;
+    }
+    
+    .promo-banner .promo-text {
+      font-size: 1.1em;
+    }
+  
+    .cta-button {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .promo-banner h3 {
+      font-size: 1.3em;
+    }
+    
+    .promo-banner .promo-text {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 0.9em;
+      padding: 6px 12px;
+    }
+  }
+/* Paket Hemat */
+.promo-package {
+    background-color: #fff8e1;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 1s;
+  }
+  
+  .package-container h3 {
+    font-size: 1.8em;
+    color: #ff4500;
+    margin-bottom: 15px;
+  }
+  
+  .package-description {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .package-time {
+    font-size: 1em;
+    color: #ff4500;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .cta-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #e04300;
+    transform: scale(1.1); /* Membesar saat hover */
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .package-container h3 {
+      font-size: 1.5em;
+    }
+  
+    .package-description {
+      font-size: 1em;
+    }
+  
+    .package-time {
+      font-size: 0.9em;
+    }
+  
+    .cta-button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .package-container h3 {
+      font-size: 1.3em;
+    }
+  
+    .package-description {
+      font-size: 0.9em;
+    }
+  
+    .package-time {
+      font-size: 0.8em;
+    }
+  
+    .cta-button {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+  .package-time {
+    font-size: 18px;
+    color: #d9534f;
+    font-weight: bold;
+}
+
+#timer {
+    font-size: 24px;
+    color: #5cb85c;
+}
+ 
